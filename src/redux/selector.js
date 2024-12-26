@@ -3,5 +3,5 @@ import { createSelector } from "reselect";
 const selectTodos = (state) => state.todos;
 // Memoized selector to get completed todos
 export const selectCompletedTodos = createSelector([selectTodos], (todos) =>
-  todos.filter((todo) => todo.completed === true)
+  todos.todos.filter((todo) => todo.completed === true)
 );

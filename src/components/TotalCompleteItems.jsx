@@ -5,7 +5,12 @@ import { selectCompletedTodos } from "../redux/selector";
 const TotalCompleteItems = () => {
   const todos = useSelector(selectCompletedTodos);
 
-  return <h4 className="mt-3">Total complete items: {todos.length}</h4>;
+  return (
+    <h4 className="mt-4 text-xl font-semibold text-gray-700">
+      Total completed items:{" "}
+      <span className="text-green-600">{todos.length}</span>
+    </h4>
+  );
 };
 
 export default TotalCompleteItems;

@@ -19,23 +19,26 @@ const AddTodoForm = () => {
   };
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className="form-inline mt-3 mb-3 flex justify-between px-4"
-    >
-      <label className="sr-only">Name</label>
-      <input
-        type="text"
-        className="form-control mb-2 mr-sm-2 flex-auto mr-10"
-        placeholder="Add todo..."
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
-      />
-
-      <button type="submit" className="btn btn-primary mb-2 px-5">
-        Submit
-      </button>
-    </form>
+    <>
+      <form
+        onSubmit={onSubmit}
+        className="flex items-center space-x-3 bg-white p-4 rounded-md shadow-md mt-5"
+      >
+        <input
+          type="text"
+          className="flex-grow p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
+          placeholder="Add a new todo..."
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
+        />
+        <button
+          type="submit"
+          className="bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 transition duration-300"
+        >
+          Add
+        </button>
+      </form>
+    </>
   );
 };
 
